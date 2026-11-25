@@ -4,16 +4,17 @@ body {
 
 .quiz_container{
     width: 500px;
-    height: 500px;
+    height: auto;
     background-color: brown;
     padding: 5px;
 }
 
 .question_container {
     background-color: burlywood;
+    box-shadow: inset 0px 2px 2px rgba(0,0,0,0.5);
     margin: 5px;
     width: auto;
-    height: 65%;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,10 +28,13 @@ body {
     height: 32%;
     display: grid;
     grid-template-columns: auto auto;
+    box-shadow: inset 0px 2px 2px rgba(0,0,0,0.5);
+    
 }
 
 .awenser{
     background-color: rgb(165, 42, 42);
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.5);
     margin: 5px;
     width: auto;
     height: 90%;
@@ -42,7 +46,11 @@ body {
 }
 
 .awenser:hover{
-    background-color: rgb(116, 29, 29);
+    background-color: rgb(192, 63, 63);
+}
+
+.awenser:active{
+    background-color: rgb(117, 26, 26);
 }
 
 .quiz_image{
@@ -53,8 +61,13 @@ body {
 }
 
 .time_bar {
-    background-image: linear-gradient(90deg, rgb(165, 42, 42) 50%, rgb(255, 228, 196) 50%,) ;
+    background: linear-gradient(90deg, rgb(165, 42, 42) 100%, rgb(255, 228, 196) 0%) ;
     width: auto;
-    margin: 2.5px;
-    height: 10px;
+    margin: 5px;
+    height: 20px;
+    box-shadow: inset 0px 2px 2px rgba(0,0,0,0.5);
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

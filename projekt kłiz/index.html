@@ -8,7 +8,58 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
+        $(function(){
+            let timeBar = $("#time_bar")
+            let timer = 15
+            let timeDisplay = $("#timer")
+            setInterval(decreaseTime(), 2000);
 
+            
+            /*
+            ściąga na procenty
+
+            n - m (n = liczba, m = procent)
+            15 - 100 (maks)
+
+            n * 100
+            -------
+               15
+
+            15 * m
+            ------
+              100
+            */
+
+
+            /*
+            $("#awenser_a").click(function(){
+                timer -= 1;
+                timeDisplay.text(timer)
+                let timeProcentage = (timer * 100) / 15
+                let certainValue = " linear-gradient(90deg, rgb(165, 42, 42) " + timeProcentage.toString() + "%, rgb(255, 228, 196) " + timeProcentage.toString() + "%)"
+                console.log(certainValue)
+                timeBar.css("background" ,  certainValue);
+            })
+            $("#awenser_b").click(function(){
+                timer += 1;
+                timeDisplay.text(timer)
+                let timeProcentage = (timer * 100) / 15
+                let certainValue = " linear-gradient(90deg, rgb(165, 42, 42) " + timeProcentage.toString() + "%, rgb(255, 228, 196) " + timeProcentage.toString() + "%)"
+                console.log(certainValue)
+                timeBar.css("background" ,  certainValue);
+            })
+                */
+
+            function decreaseTime(){
+                timer -= 1;
+                timeDisplay.text(timer)
+                let timeProcentage = (timer * 100) / 15
+                let certainValue = " linear-gradient(90deg, rgb(165, 42, 42) " + timeProcentage.toString() + "%, rgb(255, 228, 196) " + timeProcentage.toString() + "%)"
+                console.log(certainValue)
+                timeBar.css("background" ,  certainValue);
+            }
+
+        })
     </script>
 </head>
 <body>
@@ -19,8 +70,8 @@
         <h1>jaja mnie swendzo</h1>
         
     </div>
-        <div class="time_bar">
-            <p>15</p>
+        <div class="time_bar" id="time_bar">
+            <p id="timer">15</p>
         </div>
     <div class="awenser_container">
         <div class="awenser" id="awenser_a">
