@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            var player = $("#cat")
+            var plrPosX = 0
+            var plrPosY = 0
+            //car movement
+            $(document).on("keydown keyup keypress", function(event) {
+                /*if (event.key == "d"){
+                    plrPosX += 2
+                    plrPosY += 2
+                    player.css({top: plrPosX, left: plrPosY});
+                }*/
+                
+                switch (event.key){
+                    case "w":
+                        plrPosX += 2
+                        plrPosY += 0
+                        player.css({top: plrPosY, left: plrPosX});
+                    case "a":
+                        plrPosX += 2
+                        plrPosY += 0
+                        player.css({top: plrPosY, left: plrPosX});
+                    case "s":
+                        plrPosX += 0
+                        plrPosY += 2
+                        player.css({top: plrPosY, left: plrPosX});
+                    case "d":
+                        plrPosX += 2
+                        plrPosY += 0
+                        player.css({top: plrPosY, left: plrPosX});
+                    
+                }
+            })
+
+            $("#cat").click(function(){ 
+                $("body").append("<h1>kocham piwo</h1>")
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <h1>piwo</h1>
+    <img src="car.png" id="cat">
+</body>
+</html>

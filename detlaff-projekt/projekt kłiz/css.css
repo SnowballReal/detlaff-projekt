@@ -1,0 +1,65 @@
+body {
+    background-color: beige;
+}
+
+.quiz_container{
+    width: 500px;
+    height: auto;
+    background-color: brown;
+    padding: 5px;
+}
+
+.question_container {
+    background-color: burlywood;
+    margin: 5px;
+    width: auto;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+.awenser_container {
+    background-color: burlywood;
+    margin: 5px;
+    width: auto;
+    height: 32%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.awenser{
+    background-color: rgb(165, 42, 42);
+    margin: 5px;
+    width: auto;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    color: rgb(255, 228, 196);
+}
+
+.awenser:hover{
+    background-color: rgb(116, 29, 29);
+}
+
+.quiz_image{
+    position: absolute;
+    transform: translate(0px, -80px);
+    height: 120px;
+    
+}
+
+.time_bar {
+    background-image: linear-gradient(90deg, rgb(165, 42, 42) 50%, rgb(255, 228, 196) 50%) ;
+    box-shadow: inset 2px 2px black;
+    width: auto;
+    height: 15px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
